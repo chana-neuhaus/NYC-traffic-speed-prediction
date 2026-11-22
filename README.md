@@ -17,7 +17,7 @@ Using the existing data, I create features for recent speeds (working backward f
 
 **Baseline Model**
 
-Instead of using a typical dummy regressor, I define the baseline model the way a commuter might. In the absence of other data, the baseline model predicts the target speed to be the current speed. If the average speed on the Lincoln Tunnel is currently 26 mph, we assume it will remain at that rate over the next half hour. I then evaluate this model on the designated test set. The model performs surprisingly well (which is good news for commuters), with MAE of 4.24 and RMSE of 7.33. The model is occasionally prone to making extremely large errors, but otherwise its performance is really good, and, it turns out, hard to beat even with more data. 
+Instead of using a typical dummy regressor, I define the baseline model the way a commuter might. In the absence of other data, the baseline model predicts the target speed to be the current speed. If the average speed on the Lincoln Tunnel is currently 26 mph, we assume it will remain at that rate over the next half hour. I then evaluate this model on the designated test set. The model performs surprisingly well (which is good news for commuters), with MAE of 4.55 and RMSE of 7.93. The model is occasionally prone to making extremely large errors, but otherwise its performance is really good, and, it turns out, hard to beat even with more data. 
 
 **Predictive Models**
 
