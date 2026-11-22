@@ -9,8 +9,8 @@ DSC 355: Predictive Analytics
 Professor Nasheb Ismaily 
 
 
-**Introduction and Project Selection
-**
+**Introduction and Project Selection**
+
 As a commuter who travels daily for work on major interstate highways, I am passionate about initiatives that improve the commuter experience. Anyone who commutes knows the frustration of leaving work on time on a regular Tuesday, only to meet heavy congestion on the turnpike, thanks to rubbernecking fifteen miles down or ill-planned road work in bad weather. Commuters have come to rely heavily on existing solutions, including road signs warning of congestion ahead and the indispensable Waze app, but there is still room for improvement. Specifically, commuters who need to plan their route (to account for gas stops, rest stops, tolls, or coffee pickups along the way) could benefit from a tool that predicts congestion within the next 
 half hour. 
 
