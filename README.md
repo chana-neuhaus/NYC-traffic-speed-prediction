@@ -8,15 +8,15 @@ half hour.
 
 In this project, I use data from NYC DOT speed cameras to build such a model. My project focuses on the outbound Lincoln Tunnel and George Washington Bridge road segments, but could be expanded to include any road with equivalent data. I obtained the data from the NYC data API and filtered for these two road segments. The data contains records approximately every five minutes, with the average vehicle speed over those five minutes. 
 
-**Data Wrangling and Feature Engineering
-**
+**Data Wrangling and Feature Engineering**
+
 I noticed early on that the dataset contained a large number of observations with a speed of 0 mph. These records pose a challenge: zero mph is perfectly plausible during extreme congestion, but the volume suggests that at least some of these observations are faulty, perhaps due to a camera malfunction or a temporary road closure. It is hard to weed out which instances are real and which are mistakes. As a data-wrangling heuristic, I removed any zero-mph observations that occurred on days with more than 50% of observations being zero mph. While this is not a perfect strategy, it hopefully alleviates some of the errors that would 
 otherwise ensue. 
 
 Using the existing data, I create features for recent speeds (working backward for half an hour), the standard deviation over the half hour, and the recent change over the past 15 minutes. I then define the target: current_speed in the next half hour. I also add a Boolean is_holiday feature. 
 
-**Baseline Model
-**
+**Baseline Model**
+
 Instead of using a typical dummy regressor, I define the baseline model the way a commuter might. In the absence of other data, the baseline model predicts the target speed to be the current speed. If the average speed on the Lincoln Tunnel is currently 26 mph, we assume it will remain at that rate over the next half hour. I then evaluate this model on the designated test set. The model performs surprisingly well (which is good news for commuters), with MAE of 4.24 and RMSE of 7.33. The model is occasionally prone to making extremely large errors, but otherwise its performance is really good, and, it turns out, hard to beat even with more data. 
 
 **Predictive Models**
